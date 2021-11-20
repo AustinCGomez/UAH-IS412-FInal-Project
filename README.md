@@ -1,5 +1,5 @@
 # IS 412 Final Project
-This Github repository has the entire project creation of my IS 412 final project at UAH. Everything from the source code of the actual project to the documentation is enclosed in this project. 
+This Github repository has the entire project creation of my IS 412 final project at The University of Alabama in Huntsville. Everything from the source code of the actual project to the documentation is enclosed in this project. 
 ## Installation
 
 ## Demo
