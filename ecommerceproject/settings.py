@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'is412project',
+    'ecommerceproject',
 ]
 
 MIDDLEWARE = [
@@ -68,7 +69,10 @@ TEMPLATES = [
     },
 ]
 
+SETTINGS_PATH = os.path.dirname(os.path.dirname(__file__))
+
 WSGI_APPLICATION = 'ecommerceproject.wsgi.application'
+
 
 
 # Database

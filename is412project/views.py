@@ -1,6 +1,8 @@
 from django.http import HttpResponse
-
+from django.template import loader
+from django.shortcuts import render
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
+    template = loader.get_template('ecommerceproject/index.html')
+    return render(request, 'index.html')
 
