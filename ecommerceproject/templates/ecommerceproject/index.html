@@ -1,1 +1,40 @@
-<h1> Hello world! </h1>
+{% load static %}
+<link rel="stylesheet" href="{% static 'is412project/style.css' %}" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+
+<div class="header">
+  <img src="https://i.imgur.com/R3I74iF.png" alt="Trulli" width="400" height="333">
+
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#news">About Us</a></li>
+  <li><a href="#contact">Our Produce</a></li>
+  <li><a href="#about">User</a></li>
+</ul>
+</div>
+
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+  {% block content %}
+  <h1> {{title }} </h1>
+  <p> {{ description }} </p>
+  {% endblock %}
+  </div>
+  <div class="column" style="background-color:#bbb;">Column</div>
+  <div class="column" style="background-color:#ccc;">Column</div>
+</div>
+
+<div class="footer">
+  <p>IS 412 Project - Designed and built by Austin Gomez</p>
+</div>
+
+</body>
+</html>

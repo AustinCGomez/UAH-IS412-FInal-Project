@@ -22,7 +22,12 @@
 </div>
 
 <div class="row">
-  <div class="column" style="background-color:#aaa;">Column</div>
+  <div class="column" style="background-color:#aaa;">
+  {% block content %}
+  <h1> {{title }} </h1>
+  <p> {{ description }} </p>
+  {% endblock %}
+  </div>
   <div class="column" style="background-color:#bbb;">Column</div>
   <div class="column" style="background-color:#ccc;">Column</div>
 </div>
