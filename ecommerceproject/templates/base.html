@@ -1,0 +1,143 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="{% static 'is412project/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'is412project/ionicons.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'is412project/Features-Boxed.css' %}" />
+    <link rel="stylesheet" href="{% static 'is412project/Footer-Dark.css' %}" />
+    <link rel="stylesheet" href="{% static 'is412project/Navigation-with-Button.css' %}" />
+    <link rel="stylesheet" href="{% static 'is412project/styles.css' %}" />
+
+
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/Features-Boxed.css">
+    <link rel="stylesheet" href="assets/css/Footer-Dark.css">
+    <link rel="stylesheet" href="assets/css/Navigation-with-Button.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg navigation-clean-button">
+        <div class="container"><a class="navbar-brand" href="#">North Alabama Souvenir &amp; Gifts</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#">Dropdown </a>
+                        <div class="dropdown-menu"><a class="dropdown-item" href="#">First Item</a><a class="dropdown-item" href="#">Second Item</a><a class="dropdown-item" href="#">Third Item</a></div>
+                    </li>
+                </ul><span class="navbar-text actions"> <a class="login" href="#">Log In</a><a class="btn btn-light action-button" role="button" href="#">Sign Up</a></span>
+            </div>
+        </div>
+    </nav>
+    <h1><br></h1>
+    <section class="features-boxed">
+        <div class="container">
+            <div class="intro">
+                <h2 class="text-center"><em>Our Items for sale</em></h2>
+                <p class="text-center">Shop some of our crafty and beautiful items for sale! All items are made by Huntsville artists or are related to the City of Huntsville!</p>
+            </div>
+            <div class="row justify-content-center features">
+                <div class="col-sm-6 col-md-5 col-lg-4 item">
+                    <div class="box">
+                    {% for item in alldata %}
+                      
+                      {%if forloop.counter0 == 0 %}
+                        <P> Item ID: {{ item.item_id }} </P>
+                        <p> Item Name: {{item.item_name}} </p>
+                        <p> Item Description: {{item.item_description}} </p>
+                        <p> Item Price: {{item.item_price}} </p>
+                    
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-5 col-lg-4 item">
+                    <div class="box">
+                      {% elif forloop.counter0 == 1 %}
+                      <P> Item ID: {{ item.item_id }} </P>
+                      <p> Item Name: {{item.item_name}} </p>
+                      <p> Item Description: {{item.item_description}} </p>
+                      <p> Item Price: {{item.item_price}} </p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-5 col-lg-4 item">
+                    <div class="box">
+                      {% elif forloop.counter0 == 2 %}
+                      <P> Item ID: {{ item.item_id }} </P>
+                        <p> Item Name: {{item.item_name}} </p>
+                        <p> Item Description: {{item.item_description}} </p>
+                        <p> Item Price: {{item.item_price}} </p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-5 col-lg-4 item">
+                    <div class="box">
+                      {% elif forloop.counter0 == 3 %}
+                      <P> Item ID: {{ item.item_id }} </P>
+                        <p> Item Name: {{item.item_name}} </p>
+                        <p> Item Description: {{item.item_description}} </p>
+                        <p> Item Price: {{item.item_price}} </p>
+
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-5 col-lg-4 item">
+                    <div class="box">
+                      {% elif forloop.counter0 == 4 %}
+                      <P> Item ID: {{ item.item_id }} </P>
+                        <p> Item Name: {{item.item_name}} </p>
+                        <p> Item Description: {{item.item_description}} </p>
+                        <p> Item Price: {{item.item_price}} </p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-5 col-lg-4 item">
+                    <div class="box">
+                      {% elif forloop.counter0 == 5 %}
+                      <P> Item ID: {{ item.item_id }} </P>
+                        <p> Item Name: {{item.item_name}} </p>
+                        <p> Item Description: {{item.item_description}} </p>
+                        <p> Item Price: {{item.item_price}} </p>
+                      {% endif %}
+                      {% endfor %}
+                    </div>
+                </div>
+                <div class="col">
+                    <footer class="footer-dark">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-6 col-md-3 item">
+                                    <h3>Services</h3>
+                                    <ul>
+                                        <li><a href="#">About Us</a></li>
+                                        <li><a href="#">Contact Us</a></li>
+                                        <li><a href="#">Github Repository</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-6 col-md-3 item">
+                                    <h3>Created by Austin Gomez&nbsp;<br>© 2021<br><br></h3>
+                                    <ul>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6 item text">
+                                    <h3>Program Details</h3>
+                                    <p>This program was developed by Austin Gomez for his Information Systems 412 Project. The code has been dedicated open-source under the GNU General Public License V3.0. This license can be found in the Github repository along with the source code itself.&nbsp;<br><br></p>
+                                </div>
+                                <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
+                            </div>
+                            <p class="copyright">Austin Gomez © 2021</p>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

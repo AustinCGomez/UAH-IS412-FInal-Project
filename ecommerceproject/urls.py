@@ -16,8 +16,14 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import include, path
+from django.views.generic.base import TemplateView
 
 urlpatterns = [
     path('is412project/', include('is412project.urls')),
     path('admin/', admin.site.urls),
+    path('checkout/', include('checkout.urls')),
+    path('accounts/', include('accounts.urls')),
+    path('', TemplateView.as_view(template_name='ecommerceproject/index.html'), name='home'),
+    path('accounts/', include('django.contrib.auth.urls')),
+   
 ]

@@ -9,7 +9,7 @@ def index(request):
   context = {'alldata':alldata}
   
   return render(request,'ecommerceproject/index.html', context)
-
+  
 
 #def index(request):
  # obj = Item.objects.get(id=1)
