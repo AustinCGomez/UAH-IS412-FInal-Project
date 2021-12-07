@@ -19,7 +19,7 @@ from django.urls import include, path
 from django.views.generic.base import TemplateView
 
 urlpatterns = [
-    path('is412project/', include('is412project.urls')),
+    path('', include('is412project.urls')),
     path('admin/', admin.site.urls),
     path('checkout/', include('checkout.urls')),
     path('accounts/', include('accounts.urls')),

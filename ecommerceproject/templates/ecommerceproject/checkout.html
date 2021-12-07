@@ -1,4 +1,6 @@
 {% load static %}
+{% csrf_token %}
+{{ form.as_p }}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,8 +37,12 @@
             <div class="intro">
                 <h2 class="text-center"><em>Finalise&nbsp;your order!</em></h2>
             </div>
-            <p>Your order details will be presented below:&nbsp;</p><strong>First Name</strong>
-            <form><input class="form-control" type="text"><strong>Last Name</strong><input class="form-control" type="text"><strong>Phone Number</strong><input class="form-control" type="text"><strong>Address</strong><input class="form-control" type="text"><strong>Zip Code</strong><input class="form-control" type="text"><strong>Credit Card Details</strong><input class="form-control" type="text"><button class="btn btn-primary" type="button">Submit Your Order</button></form>
+            <p>Your order details will be presented below:&nbsp;</p><strong>Item ID</strong>
+            
+            <form action="" method="POST">
+                {% csrf_token %}
+                
+            <input class="form-control" type="text"><strong>Item Quantity</strong><input class="form-control" type="text"><strong>First Name</strong> <input class="form-control" type="text"><strong>Last Name</strong><input class="form-control" type="text"><strong>Phone Number</strong><input class="form-control" type="text"><strong>Address</strong><input class="form-control" type="text"><strong>Zip Code</strong><input class="form-control" type="text"><strong>Credit Card Details</strong><input class="form-control" type="text"><button class="btn btn-primary" type="s">Submit Your Order</button></form>
             <div class="row justify-content-center features">
                 <div class="col">
                     <footer class="footer-dark">
