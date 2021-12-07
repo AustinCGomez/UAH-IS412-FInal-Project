@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-!-#w@zzcg7)37uqy$8*fb&%%s5s*@$c96gx^gn9(jg_h#yo=og
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['austincgomez.pythonanywhere.com']
 
 
 # Application definition
@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'ecommerceproject',
     'checkout',
     'accounts'
-    
+
 ]
 
 LOGIN_REDIRECT_URL = '/'
@@ -128,6 +128,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = '//home/austincgomez/UAH-IS412-FInal-Project/is412project/static/is412project'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
