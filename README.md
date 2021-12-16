@@ -3,7 +3,7 @@ This Github repository has the entire project creation of my IS 412 final projec
 
 ## Consumer Guide
 WARNING: 
-The project has not production-ready variation. The code is open-source and you made modify it how you want for any project that you want under the GNU General Public License v3.0 guidelines. Please follow the Developer Installation Guide below to get started. 
+The project has not a production-ready version. We highly discourage running the code directly in production. The code is open-source but you will need to modify it depending on the requirements for your project.
 
 ## Developer Installation
 You will need Python 3.8 and Django 3.2.9. If you use a version that is not the ones listed then you may have to troubleshoot and modify code to get it to work as some Django version in particular have fastly different changes. 
